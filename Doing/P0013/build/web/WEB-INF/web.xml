@@ -8,6 +8,14 @@
         <servlet-name>MenuLoadController</servlet-name>
         <servlet-class>huytg.menu.controllers.LoadController</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InfoLoadController</servlet-name>
+        <servlet-class>huytg.info.controllers.LoadController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ScheduleLoadController</servlet-name>
+        <servlet-class>huytg.schedule.controllers.LoadController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoadController</servlet-name>
         <url-pattern>/LoadController</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>MenuLoadController</servlet-name>
         <url-pattern>/MenuLoadController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InfoLoadController</servlet-name>
+        <url-pattern>/InfoLoadController</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ScheduleLoadController</servlet-name>
+        <url-pattern>/ScheduleLoadController</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

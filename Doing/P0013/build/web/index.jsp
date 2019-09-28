@@ -97,7 +97,7 @@
                                         </li><li class="  " style="">
                                             <a rel="nofollow" href="MenuLoadController">Menu and Price list</a>
                                         </li><li class="  " style="">
-                                            <a rel="nofollow" href="findus.jsp">Find us</a>
+                                            <a rel="nofollow" href="InfoLoadController?infoId=1">Find us</a>
                                         </li>                
                                     </ul>
                                 </div>

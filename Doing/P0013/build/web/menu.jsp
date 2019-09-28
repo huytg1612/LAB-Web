@@ -95,7 +95,7 @@
                                             <a rel="nofollow" href="MenuLoadController">Menu and Price list</a>
                                         </li>
                                         <li class="  " style="">
-                                            <a rel="nofollow" href="findus.jsp">Find us</a>
+                                            <a rel="nofollow" href="InfoLoadController?infoId=1">Find us</a>
                                         </li>                
                                     </ul>
                                 </div>
@@ -143,22 +143,27 @@
                                     </c:if>
                                 </div>
                             </div>
-                            <div id="right" class="span3">
-                                <div class="sidebar">
-                                    <div class="wrapper share-box">
-                                        <div class="heading">
-                                            <h4>Share this page</h4>
-                                        </div>
+                        </div>
+                        <div id="right" class="span3">
+                            <div class="sidebar">
+                                <div class="wrapper share-box">
+                                    <div class="heading">
+                                        <h4>Share this page</h4>
+                                    </div>
 
-                                        <div class="content"><span><ul>
-                                                    <li><a id="share-facebook" href="http://us-123sushi.simplesite.com/410908035#"><i class="icon-facebook-sign"></i><span>Share on Facebook</span></a></li>
-                                                    <li><a id="share-twitter" href="http://us-123sushi.simplesite.com/410908035#"><i class="icon-twitter-sign"></i><span>Share on Twitter</span></a></li>
-                                                    <li><a id="share-google-plus" href="http://us-123sushi.simplesite.com/410908035#"><i class="icon-google-plus-sign"></i><span>Share on Google+</span></a></li>    
-                                                </ul></span></div>
+                                    <div class="content">
+                                        <span>
+                                            <ul>
+                                                <li><a id="share-facebook" href="http://us-123sushi.simplesite.com/410908035#"><i class="icon-facebook-sign"></i><span>Share on Facebook</span></a></li>
+                                                <li><a id="share-twitter" href="http://us-123sushi.simplesite.com/410908035#"><i class="icon-twitter-sign"></i><span>Share on Twitter</span></a></li>
+                                                <li><a id="share-google-plus" href="http://us-123sushi.simplesite.com/410908035#"><i class="icon-google-plus-sign"></i><span>Share on Google+</span></a></li>    
+                                            </ul>
+
+                                        </span>
                                     </div>
                                 </div>
                             </div>
-                        </div>        
+                        </div>
                     </div>
                 </div>  <!-- the controller has determined which view to be shown in the content -->
 

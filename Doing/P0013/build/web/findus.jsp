@@ -4,6 +4,8 @@
     Author     : SE130226
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!DOCTYPE html>
@@ -93,7 +95,7 @@
                                         </li><li class=" " style="">
                                             <a rel="nofollow" href="MenuLoadController">Menu and Price list</a>
                                         </li><li class=" active  " style="">
-                                            <a rel="nofollow" href="findus.jsp">Find us</a>
+                                            <a rel="nofollow" href="InfoLoadController?infoId=1">Find us</a>
                                         </li>                
                                     </ul>
                                 </div>
@@ -121,11 +123,12 @@
                                                 <div class="span6">
                                                     <div class="item">
                                                         <div class="heading">
+                                                            <c:set var="info" value="${requestScope.INFO}"/>
                                                             <h4 class="item-title map-page-title">Address and contact:</h4>
                                                         </div>
                                                         <div class="content">
                                                             <div class="country">
-                                                                <p>The Sushi Restaurant<br>New York, NY, USA</p>
+                                                                <p>TokyoDeli<br>${info.address}</p>
                                                             </div>
 
                                                             <div class="row-fluid">
@@ -133,7 +136,7 @@
                                                                     Tel:
                                                                 </div>    
                                                                 <div class="span10">
-                                                                    12345
+                                                                    ${info.tel}
                                                                 </div>    
                                                             </div>
                                                             <div class="row-fluid">
@@ -141,7 +144,7 @@
                                                                     Email:
                                                                 </div>    
                                                                 <div class="span10">
-                                                                    your-email@your-email.com
+                                                                    ${info.email}
                                                                 </div>    
                                                             </div>
                                                         </div>
@@ -153,7 +156,16 @@
                                                             <h4 class="item-title map-page-title">Opening hours:</h4>
                                                         </div>
                                                         <div class="content">
-                                                            <p>Monday Closed<br>Tuesday 12 - 22<br>Wednesday 12 - 22<br>Thursday 12 - 22<br>Friday 11 - 23<br>Saturday 11 - 23<br>Sunday 11 - 22</p>
+                                                            <c:if test="${requestScope.SCHEDULES != null}">
+                                                                <c:if test="${requestScope.SCHEDULES.size() > 0}">
+                                                                    <c:forEach items="${requestScope.SCHEDULES}" var="schedule">
+                                                                        <p>
+                                                                            ${schedule.weekDay} ${schedule.openAt}-${schedule.closeAt}<br/>
+                                                                        </p>
+                                                                    </c:forEach>
+                                                                </c:if>
+                                                            </c:if>
+
                                                         </div>
                                                     </div>
                                                 </div>
@@ -164,7 +176,7 @@
                                         <div class="content">
                                             <div class="map-container">
                                                 <div>
-                                                    <img src="images/google-image.jpg" style="width:100%"/>
+                                                    <img src="images/${info.picture}" style="width:100%"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -231,13 +243,15 @@
                 {
                     w[l] = w[l] || [];
                     w[l].push({'gtm.start':
-                                new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0],
+                                new Date().getTime(), event: 'gtm.js'});
+                    var f = d.getElementsByTagName(s)[0],
                             j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
                     j.async = true;
                     j.src =
                             '//www.googletagmanager.com/gtm.js?id=' + i + dl;
                     f.parentNode.insertBefore(j, f);
-                }})(window, document, 'script', 'dataLayer', 'GTM-2MMH');</script>
+                }
+            })(window, document, 'script', 'dataLayer', 'GTM-2MMH');</script>
         <!-- End Google Tag Manager -->
 
 
